@@ -24,8 +24,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <title>MindStar: Enhancing Math Reasoning in Pre-trained LLMs at Inference Time</title>
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -43,6 +43,8 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 </head>
 <body>
 
@@ -52,28 +54,46 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">MindStar: Enhancing Math Reasoning in Pre-trained LLMs at Inference Time</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                <a href="https://luciferkonn.github.io/" target="_blank">Jikun Kang</a><sup>*</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  <a href="" target="_blank">Derek Li</a><sup>*</sup>,</span>
+                <span class="author-block">
+                  <a href="" target="_blank">Xi Chen</a>,</span>
+                <span class="author-block">
+                  <a href="" target="_blank">Amirreza Kazemi</a>,</span>
+                <span class="author-block">
+                  <a href="" target="_blank">Qianyi Sun</a>,</span>
+                <span class="author-block">
+                  <a href="" target="_blank">Boxing Chen</a>,</span>
+                <span class="author-block">
+                  <a href="" target="_blank">Dong Li</a>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                  <a href="" target="_blank">Xu He</a>,</span>
+                  <span class="author-block">
+                  <a href="" target="_blank">Quan He</a>,</span>
+                  <span class="author-block">
+                  <a href="" target="_blank">Feng Wen</a>,</span>
+                  <span class="author-block">
+                  <a href="" target="_blank">Jianye Hao</a>,</span>
+                  <span class="author-block">
+                    <a href="" target="_blank">Jun Yao</a>
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
-                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    <span class="author-block">Noah's Ark Laboratory<br></span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution</small></span>
                   </div>
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://arxiv.org/pdf/2405.16265" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -82,7 +102,7 @@
                       </a>
                     </span>
 
-                    <!-- Supplementary PDF link -->
+                    <!-- Supplementary PDF link
                     <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
@@ -94,7 +114,7 @@
                   </span>
 
                   <!-- Github link -->
-                  <span class="link-block">
+                  <!-- <span class="link-block">
                     <a href="https://github.com/YOUR REPO HERE" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
@@ -102,11 +122,11 @@
                     </span>
                     <span>Code</span>
                   </a>
-                </span>
+                </span> --> 
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="https://arxiv.org/abs/2405.16265" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -127,13 +147,11 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
+      <!-- <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
         <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
-        type="video/mp4">
-      </video>
+        <img src="static/images/archi.png", alt="MindStar">
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+      <b>M*: </b> A searching framework for inference time step reasoning. <b>A:</b> Each time we gather questions and previous reasoning steps to the LLMs and sample N next reasoning steps. <b>B:</b> We organize the reasoning process as a tree. Each node represents either question (the root node), answers (leaf nodes), or reasoning steps (all other nodes). A searching method traverses the reasoning tree and select a node to expand. We add the reasoning step of the selected node back to the prompt for next query step. We stop the generation processes until either the answer is find or the maximum consumption is reached.
       </h2>
     </div>
   </div>
@@ -148,8 +166,12 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+          Although Large Language Models (LLMs) achieve remarkable performance across various tasks, they often struggle with complex reasoning tasks, such as answering mathematical questions.  Recent efforts to address this issue have primarily focused on leveraging mathematical datasets through supervised fine-tuning or self-improvement techniques.  However, these methods often depend on high-quality datasets that are difficult to prepare, or they require substantial computational resources for fine-tuning.  Inspired by findings that LLMs know how to produce the right answer but struggle to select the correct reasoning path, we propose a purely inference-based searching method---MindStar (M*).  This method formulates reasoning tasks as searching problems and proposes two search ideas to identify the optimal reasoning paths.  We evaluate the M* framework on both the GSM8K and MATH datasets, comparing its performance with existing open and closed-source LLMs.  Our results demonstrate that M* significantly enhances the reasoning abilities of open-source models, such as Llama-2-13B and Mistral-7B, and achieves comparable performance to GPT-3.5 and Grok-1, but with substantially reduced model size and computational costs.
           </p>
+          <figure>
+        <img src="static/images/inference_savings.jpg" alt="inference_savings">
+        <figcaption>MATH accuracy of different LLMs. M* on LLaMA-2-13B achieves similar performance as GPT-3.5 (4-shot) while saving approximately 200 times the computational resources.</figcaption>
+        </figure>
         </div>
       </div>
     </div>
@@ -157,128 +179,119 @@
 </section>
 <!-- End paper abstract -->
 
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Can we enhance LLM reasoning with output selection?</h2>
+        <div class="content has-text-justified">
+          <p>
+          To explore this, we conduct an experiment utilizing different reward models to assist LLM for output selection.  Here, we leverage the Outcome-supervised Reward Model (ORM), which scores the entirety of reasoning solutions, and the Process-supervised Reward Model (PRM), which scores each individual reasoning step, for the selection of reasoning solutions.  Initially, we apply both the ORM and the PRM to select the final answer from multiple sampled chain-of-thoughts (CoT) solutions. The figure below shows that PRM selects better reasoning answers than ORM. Additionally, we employ the PRM to assist the LLM in a tree-of-thought context; Rather than generating the complete solution, the LLM produces multiple intermediate steps. The PRM then scores these steps and selects the best, facilitating the LLM in proceeding generation from a promising step. Our results demonstrate that step-level selection outperforms the two CoT selection baselines significantly.
+          </p>
+          <figure>
+        <img src="static/images/prmvsorm.png" alt="prmvsorm">
+        <figcaption>Different reward models for LLMs' output selections on MATH dataset. The x-axis denotes the total number of generated outputs</figcaption>
+        </figure>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
     </div>
   </div>
-</div>
-</div>
 </section>
-<!-- End image carousel -->
 
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">M*: Think and Reflect Step by Step</h2>
+          <div class="content has-text-justified">
+          <h3 class="title is-4">Reasoning Node Expansion</h3>
+          <div class="content has-text-justified">
+            <p>
+            Given that we select a reasoning node \(n_d\) to expand, we design a prompt template Example 3.1 in order to collect next steps from LLMs.  As shown in the example, the LLM takes the original question as \{question\} and the current reasoning path as \{answer\} in the prompt. Note that in the first iteration of the algorithm, the selected node is the root containing the question only, and therefore the \{answer\} is empty.  For the reasoning path \(n_d\), the LLM generates $N$ multiple intermediate steps \(e^1_{d}, e^2_{d}, \dots, e^N_{d}\) for the given prompt and we append them as the children node of the current node.  In the next step of the algorithm, the new child nodes will be assessed, and a new node will be selected for further expansion.  We also acknowledge that one alternative for generating the steps is fine-tuning the LLM using step tokens.  However, it could potentially degrade the LLM's reasoning ability and, more importantly, is not aligned with the focus of this paper which, is enhancing the LLM without any weight modification.
+            </p>
+            <figure>
+          <img src="static/images/Example3.1.png" alt="example3.1">
+          </figure>
           </div>
+          </div>
+          <div class="content has-text-justified">
+          <h3 class="title is-4">Reasoning Path Selection</h3>
+          <div class="content has-text-justified">
+            <p>
+            Following the reasoning node expansion, we use the pre-trained PRM \(\mathcal{P}\) to reflect each newly generated step. The PRM takes the path \(n_d\) and the steps $e_d$ as inputs and returns the corresponding reward value.  After the evaluation, we require a tree search algorithm to select the next node for expansion.  Note that our framework is agnostic to the search algorithm, and in this work, we instantiate it with two tree search methods, namely beam search and Levin tree search.  Additionally, we introduce an ensemble method of M* search as an extension - Forest Search.
+            </p>
+            <figure>
+          <img src="static/images/MStarAlgo.png" alt="algo">
+          </figure>
+          </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Math Reasoning Benchmarks</h2>
+        <div class="content has-text-justified">
+          <figure>
+        <img src="static/images/math_results.png" alt="math">
+        <figcaption>Comparison results of various schemes on the GSM8K and MATH reasoning benchmarks are presented. The number for each entry is the problem solve percentage. The notation SC@32 denotes self-consistency across 32 candidate results, while \(n\)-shot indicates results from few-shot examples. CoT-SC@16 refers to self-consistency on 16 Chain of Thought (CoT) candidate results. BS@16 represents the beam search method, involving 16 candidates at each step-level, and LevinTS@16 details the Levin Tree Search method with the same number of candidates. Notably, the most recent result for the GPT-4 on the MATH dataset is reported as GPT-4-turbo-0409, which we highlight as it represents the best performance within the GPT-4 family.</figcaption>
+        </figure>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Scaling Results</h2>
+        <div class="content has-text-justified">
+          <figure>
+        <img src="static/images/scaling.png" alt="scale">
+        <figcaption>We study how M* performance scales with different parameters. In (a), We study how M* performance scales with the number of step-level candidates. We choose Llama-2-13B with BS as the base model and search algorithm, respectively. In (b), we show base LLM model size vs. PRM model size. The red dots represents performance across various base model sizes using PRM-13B, while the purple dots indicates performance with PRM-7B. The grey area shows the performance improvements achieved by increasing the size of the PRM model. In (c), we present forest search results.</figcaption>
+        </figure>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
 
-
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Llama Scaling Results</h2>
+        <div class="content has-text-justified">
+        <p>
+          In our investigation of scaling laws within the Llama family of models, notably Llama-2 and Llama-3, we applied the M* method to observe its impact on performance improvement relative to model size.  As illustrated in below, the application of M* substantially enhances the performance of the Llama-2 model, aligning its scaling trajectory closer to that of the Llama-3 model.  This improvement in scaling efficiency through the M* method is significant because it suggests that the reasoning capabilities of LLMs can be enhanced without necessarily increasing the volume of high-quality training data.  Instead, the focus shifts toward <b>selecting</b> right responses, thereby conserving resources while still achieving competitive performance metrics. 
+        </p>
+          <figure>
+        <img src="static/images/llama_scale.png" alt="llama">
+        <figcaption>Scaling laws for Llama-2 and Llama-3 model families on MATH datasets. The results are all reported from their original resources. We use the Scipy tool and a logarithm function to compute the fitting curve.</figcaption>
+        </figure>
+        </div>
       </div>
     </div>
-  </section>
-<!--End paper poster -->
+  </div>
+</section>
 
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>@article{kang2024mindstar,
+  title={MindStar: Enhancing Math Reasoning in Pre-trained LLMs at Inference Time},
+  author={Kang, Jikun and Li, Xin Zhe and Chen, Xi and Kazemi, Amirreza and Sun, Qianyi and Chen, Boxing and Li, Dong and He, Xu and He, Quan and Wen, Feng and Hao, Jianye and Yao, Jun},
+  journal={arXiv preprint arXiv:2405.16265},
+  year={2024}
+}</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
